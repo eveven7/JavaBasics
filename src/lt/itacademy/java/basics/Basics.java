@@ -49,14 +49,14 @@ public class Basics {
     public static void basics3() {
         //  Calculate cube’s volume and perimeter.
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Number: ");
+        System.out.println("Number: ");
         Double number = scanner.nextDouble();
 
         Double volume = Arithmetic.calculateVolume(number);
-        System.out.print("Cube Volume: " + volume);
+        System.out.println("Cube Volume: " + volume);
 
         Double perimeter = Arithmetic.calculatePerimeter(number);
-        System.out.print(" " + "Cube Perimeter: " + perimeter);
+        System.out.println(" " + "Cube Perimeter: " + perimeter);
 
     }
 
@@ -65,12 +65,12 @@ public class Basics {
         Scanner scanner = new Scanner(System.in);
 //        Create a method which converts feet and inches to centimeters. It needs to have two parameters.
 //        First parameter is feet and second is inches.
-        System.out.print("Enter The  feet: ");
+        System.out.println("Enter The  feet: ");
         Double feet = scanner.nextDouble();
-        System.out.print("Enter The  inches: ");
+        System.out.println("Enter The  inches: ");
         Double inches = scanner.nextDouble();
         Double fullLength = Arithmetic.calculateInches(feet, inches);
-        System.out.print(" " + "The answer: " + fullLength);
+        System.out.println(" " + "The answer: " + fullLength);
 
 
     }
@@ -78,11 +78,11 @@ public class Basics {
     public static void basics5() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the first side of Triangle:\n\n");
+        System.out.println("Enter the first side of Triangle:\n\n");
         Double a = scanner.nextDouble();
-        System.out.print("Enter the second side of Triangle:\n\n");
+        System.out.println("Enter the second side of Triangle:\n\n");
         Double b = scanner.nextDouble();
-        System.out.print("Enter the third side of Triangle:\n\n");
+        System.out.println("Enter the third side of Triangle:\n\n");
         Double c = scanner.nextDouble();
 
         Operators.isTriangle(a, b, c);
@@ -92,28 +92,36 @@ public class Basics {
     public static void basics6() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the distance:\n\n");
+        System.out.println("Enter the distance:\n\n");
         Double distance = scanner.nextDouble();
-        System.out.print("Enter how much fuel does the car have in the tank:\n\n");
+        System.out.println("Enter how much fuel does the car have in the tank:\n\n");
         Double fuelLeft = scanner.nextDouble();
-        System.out.print("Enter car fuel usage per 100km :\n\n");
+        System.out.println("Enter car fuel usage per 100km :\n\n");
         Double fuelUsage = scanner.nextDouble();
-        System.out.print("Enter fuel price per liter:\n\n");
+        System.out.println("Enter fuel price per liter:\n\n");
         Double fuelPrice = scanner.nextDouble();
         String output = "Destination is in" + distance + "km" + ". Car is " + "to reach the destination. ";
         System.out.println(output);
 
+
+
     }
     public static void basics7() {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter days:\n\n");
+        System.out.println("Enter days:\n\n");
         int a = scanner.nextInt();
-        Loops.calculateHours(a);
 
-        System.out.println(calculateHours(365));
+        String answer = Loops.calculateHours(a);
+        System.out.println("Answer: " + answer);
+
+        String answerWhile = Loops.calculateHoursLoop(a);
+        System.out.println("Answer with while loop: " + answerWhile);
 
 
+        System.out.println("Enter number to calculate factorial:\n\n");
+        int b = scanner.nextInt();
+        int number = Loops.calculateFactorial(b);
+        System.out.println("Answer factorial of a number: " + number);
     }
 
     public static void basics8() {
