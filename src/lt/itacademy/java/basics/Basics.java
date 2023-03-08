@@ -9,8 +9,8 @@ public class Basics {
 //        basics3();
 //        basics4();
 //        basics5();
-//        basics6();
-     basics7();
+        basics6();
+//        basics7();
 
     }
 
@@ -93,15 +93,16 @@ public class Basics {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the distance:\n\n");
-        Double distance = scanner.nextDouble();
+        Float distance = scanner.nextFloat();
         System.out.println("Enter how much fuel does the car have in the tank:\n\n");
-        Double fuelLeft = scanner.nextDouble();
+        Float fuelLeft = scanner.nextFloat();
         System.out.println("Enter car fuel usage per 100km :\n\n");
-        Double fuelUsage = scanner.nextDouble();
+        Float fuelUsage = scanner.nextFloat();
         System.out.println("Enter fuel price per liter:\n\n");
-        Double fuelPrice = scanner.nextDouble();
-        String output = "Destination is in" + distance + "km" + ". Car is " + "to reach the destination. ";
-        System.out.println(output);
+        Float fuelPrice = scanner.nextFloat();
+
+        String answer = Operators.carEvaluator(distance, fuelLeft, fuelUsage, fuelPrice);
+        System.out.println("Answer: " + answer);
 
 
 

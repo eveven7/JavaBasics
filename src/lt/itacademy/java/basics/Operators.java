@@ -26,15 +26,15 @@ public class Operators {
         // will it have left on the tank. Program has four parameters: distance to the destination, how much fuel does the car
         // have in the tank, car fuel usage per 100km and fuel price per liter.
 
-        float canDrive = fuelLeft * 100 / fuelUsage;
-        if (distance < canDrive) {
-            // how much fuel is left after reaching destination
-            float finalFuel = distance / 100 * fuelUsage;
-            return "The destination is in " + String.format("%.2f", distance) + ". The car is able to reach it's destination. It will have " + String.format("%.2f", finalFuel) + " liters of fuel left.";
-        } else {
-            float distanceLeft = distance - canDrive;
-            float fuelNeeded = distanceLeft * fuelUsage / 100;
-            return "The destination is in " + String.format("%.2f", distance) + ". The car is not able to reach it's destination. It needs " + String.format("%.2f", fuelNeeded) + " liter more fuel. It will cost " + fuelNeeded * fuelPrice + "";
+        float temp_dest = (float) Math.ceil(distance / 100);
+        float KmPerLitle = fuelUsage / 100;
+        float LitreForTrip = distance * KmPerLitle;
+        if (fuelLeft * KmPerLitle * 100 < distance)
+            return "Destination is in " + distance + "km. " + "Car is not able to reach the destination.It needs " + (LitreForTrip - fuelLeft) + " liters of fuel more. It will cost " + fuelPrice * (LitreForTrip - fuelLeft);
+        else {
+            return "Destination is in " + distance + "km. " + "Car Will reach the destination. And will have " + (fuelLeft - LitreForTrip) + " liters of fuel more.";
+
         }
+    }
     }
 }
