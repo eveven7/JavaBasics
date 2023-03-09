@@ -5,7 +5,7 @@
 - Loops
 - Control statements
 
-# Eshop project
+# Eshop project (Java_oop_basics_part_one)
 - Package
 - Classes and Objects
 - Enum
