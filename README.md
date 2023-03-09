@@ -13,4 +13,14 @@
 - Acces modifiers
 - Inner objects, constructors
 
+# Eshop project (Java_oop_basics_part_two)
+- Inheritance
+- Polymorphism
+-Overloading
+- Overriding
+- Encapsulation
+- Abstraction
+- Interfaces and abstraction
+- Exceptionss
+
 
